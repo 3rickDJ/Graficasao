@@ -2,8 +2,6 @@
 #include "Point.h"
 #define PI 3.1415926535
 class Matrix {
-  // cargar identidad a la matriz A
-  static void LoadID(float A[3][3]);
   // carga de unos al vector A
   static void LoadOnes(float A[3]);
   // llena de zeros la matriz A
@@ -13,14 +11,16 @@ class Matrix {
   // multiplicacion de matrices (transformaciones)
   // B<-A*B
   static void Mult(float A[3][3], float B[3][3]);
-  // multiplicacion de matriz de transformacion por un punto
-  // P' <- A*P
-  // retorna Punto modificado por la matriz de transformacion
-  static Point Mult(float A[3][3], const Point &P);
   // Copia los valores de A a B
   static void CopyMatrix(float A[3][3], float B[3][3]);
 
 public:
+  // cargar identidad a la matriz A
+  static void LoadID(float A[3][3]);
+  // multiplicacion de matriz de transformacion por un punto
+  // P' <- A*P
+  // retorna Punto modificado por la matriz de transformacion
+  static Point getPoint(float A[3][3], const Point &P);
   // Con el vector de traslacion. Crear una matriz T
   // A<-T*A
   static void Mover(Point VectorTraslacion, float A[3][3]);
