@@ -16,3 +16,13 @@ void Point::Draw(int x, int y) {
   glVertex2i(x, y);
   glEnd();
 }
+Point Point::operator+(const Point &p2) {
+  Point P;
+  P.x = this->x + p2.x;
+  P.y = this->y + p2.y;
+  return P;
+}
+void Point::operator=(const Point &p2) {
+  x = p2.x;
+  y = p2.y;
+}
