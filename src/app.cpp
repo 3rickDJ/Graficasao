@@ -1,19 +1,18 @@
+#include "Line.h"
+#include "Triangulo.h"
 #include <GL/glut.h>
 #include <unistd.h>
-
-#include "Line.h"
-
 // Variables globales
+Triangulo triangulo({-43, -25}, {0, 50}, {43, -25});
 
-void initTriangle() {}
-
-void plotAxis(){
-    Line::Draw({-255,0},{255,0});
-    Line::Draw({0,-255},{0,255});
+void plotAxis() {
+  Line::Draw({-255, 0}, {255, 0});
+  Line::Draw({0, -255}, {0, 255});
 }
 void dibujaEscenario() {
-    /* triangle.draw(); */
-    plotAxis();
+  plotAxis();
+  triangulo.draw();
+  triangulo.DeltaAngulo = 20;
 }
 
 // actualizar variables de control
@@ -42,7 +41,6 @@ void init() {
 
 int main(int argc, char **argv) {
 
-  initTriangle();
   glutInit(&argc, argv);
   glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
   glutInitWindowSize(500, 500); /* ventana 500x500 pixeles */
