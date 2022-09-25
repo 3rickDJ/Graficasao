@@ -1,12 +1,20 @@
 #include <GL/glut.h>
 #include <unistd.h>
 
+#include "Line.h"
+
 // Variables globales
-Triangulo triangle;
 
 void initTriangle() {}
 
-void dibujaEscenario() { triangle.draw(); }
+void plotAxis(){
+    Line::Draw({-255,0},{255,0});
+    Line::Draw({0,-255},{0,255});
+}
+void dibujaEscenario() {
+    /* triangle.draw(); */
+    plotAxis();
+}
 
 // actualizar variables de control
 void update() {
@@ -23,7 +31,7 @@ void display() {
 
 void init() {
   glColor3f(0.0, 0.0, 0.0);
-  glPointSize(2.0);
+  glPointSize(1.0);
   glClearColor(1.0, 1.0, 1.0, 1.0);
   glMatrixMode(GL_PROJECTION);
   glLoadIdentity();
