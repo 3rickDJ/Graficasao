@@ -1,9 +1,14 @@
 #include "Line.h"
 #include "Triangulo.h"
+#include "Montagna.h"
 #include <GL/glut.h>
 #include <unistd.h>
 // Variables globales
-Triangulo triangulo({-43, -25}, {0, 50}, {43, -25});
+/* Triangulo triangulo({-43, -25}, {0, 50}, {43, -25}); */
+Montagna montagna1({-51, -25}, {0, 50}, {48, -25}, {-200,200});
+Montagna montagna2({-48, -25}, {0, 59}, {53, -25}, {-180,200});
+Montagna montagna3({-60, -25}, {0, 58}, {52, -25}, {187,200});
+Montagna montagna4({-53, -25}, {0, 55}, {53, -25}, {210,200});
 
 void plotAxis() {
   Line::Draw({-255, 0}, {255, 0});
@@ -12,7 +17,11 @@ void plotAxis() {
 void dibujaEscenario() {
   plotAxis();
   /* triangulo.Traslacion = {60,60}; */
-  triangulo.draw();
+  /* triangulo.draw(); */
+  montagna1.draw();
+  montagna2.draw();
+  montagna3.draw();
+  montagna4.draw();
 }
 
 // actualizar variables de control
@@ -30,7 +39,7 @@ void display() {
 
 void init() {
 
-  triangulo.Traslacion = {60,60};
+  /* triangulo.Traslacion = {60,60}; */
 
   glColor3f(0.0, 0.0, 0.0);
   glPointSize(1.0);
