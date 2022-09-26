@@ -2,11 +2,11 @@
 class Point {
 public:
   // coordenadas del punto
-  int x;
-  int y;
+  float x;
+  float y;
   // constructores del punto
   Point();
-  Point(int  x, int y);
+  Point(float  x, float y);
   // graficar punto (x,y)
   void draw();
   void static Draw(int x, int y);
