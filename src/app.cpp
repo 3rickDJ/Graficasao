@@ -13,6 +13,10 @@ Montagna montagna4({-53, -25}, {0, 55}, {53, -25}, {210,200});
 void plotAxis() {
   Line::Draw({-255, 0}, {255, 0});
   Line::Draw({0, -255}, {0, 255});
+  //Lineas laterales del carril carretera
+  Line::Draw({-112,-255}, {-58, 255});
+  Line::Draw({112,-255}, {58, 255});
+
 }
 void dibujaEscenario() {
   plotAxis();
