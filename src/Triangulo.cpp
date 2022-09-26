@@ -26,6 +26,7 @@ void Triangulo::draw() {
   rotar(DeltaAngulo);
   escalar(DeltaEscalamiento);
   mover(DeltaTraslacion);
+  /* rotar(DeltaAngulo); */
   Point p0, p1, p2;
   //plotear
   p0 = Matrix::getPoint(A, Puntos[0]);
@@ -41,5 +42,22 @@ void Triangulo::update() {
     DeltaAngulo = -4;
   } else if(DeltaAngulo <=0 && Angulo <=0){
     DeltaAngulo = 4;
+  }
+  if(Traslacion.x >=100){
+      DeltaTraslacion.x -= 5;
+  } else if( Traslacion.x <=99 ){
+      DeltaTraslacion.x += 5;
+  }
+  if(Escalamiento.x >=6){
+      DeltaEscalamiento.x -= 0.9;
+      DeltaEscalamiento.y -= 0.9;
+  }
+  if(Escalamiento.x<=1){
+      Escalamiento.x = 1;
+      Escalamiento.y = 1;
+  }
+  if( Escalamiento.x <=1 ){
+      DeltaEscalamiento.x += 0.1;
+      DeltaEscalamiento.y += 0.1;
   }
 }

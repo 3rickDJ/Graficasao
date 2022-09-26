@@ -11,8 +11,8 @@ void plotAxis() {
 }
 void dibujaEscenario() {
   plotAxis();
+  /* triangulo.Traslacion = {60,60}; */
   triangulo.draw();
-  triangulo.DeltaAngulo = 20;
 }
 
 // actualizar variables de control
@@ -29,6 +29,9 @@ void display() {
 }
 
 void init() {
+
+  triangulo.Traslacion = {60,60};
+
   glColor3f(0.0, 0.0, 0.0);
   glPointSize(1.0);
   glClearColor(1.0, 1.0, 1.0, 1.0);
