@@ -5,10 +5,10 @@
 #include <unistd.h>
 // Variables globales
 /* Triangulo triangulo({-43, -25}, {0, 50}, {43, -25}); */
-Montagna montagna1({-51, -25}, {0, 50}, {48, -25}, {-200,200});
-Montagna montagna2({-48, -25}, {0, 59}, {53, -25}, {-180,200});
-Montagna montagna3({-60, -25}, {0, 58}, {52, -25}, {187,200});
-Montagna montagna4({-53, -25}, {0, 55}, {53, -25}, {210,200});
+Montagna montagna1({-50, -25}, {0, 41}, {48, -25}, {-222,200});
+Montagna montagna2({-48, -25}, {0, 53}, {53, -25}, {-180,200});
+Montagna montagna3({-60, -25}, {0, 54}, {52, -25}, {187,200});
+Montagna montagna4({-53, -25}, {0, 52}, {53, -25}, {210,200});
 
 void plotAxis() {
   Line::Draw({-255, 0}, {255, 0});
