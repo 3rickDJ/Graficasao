@@ -3,6 +3,16 @@
 #include "Matrix.h"
 #include "Point.h"
 #include "math.h"
+
+Circulo::Circulo() {
+    radio = 20;
+    Traslacion = {0,0};
+    Escalamiento = {1, 1};
+    Angulo = 0;
+    DeltaTraslacion = {0,0};
+    DeltaEscalamiento = {1,1};
+    DeltaAngulo = 0;
+}
 Circulo::Circulo(float radio, Point pos, Point Displacement, Point escala) {
     this->radio = radio;
     this->Traslacion = pos;
