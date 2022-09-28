@@ -4,6 +4,7 @@
 
 class Arbol {
     public:
+    Arbol();
     Arbol(Point pos, Point DeltaTraslacion);
     Triangulo triangulos[2];
     Rectangulo tronco;

@@ -1,6 +1,7 @@
 #include "Arbol.h"
 #include "Line.h"
 #include "Matrix.h"
+Arbol::Arbol(){}
 Arbol::Arbol(Point pos, Point DeltaTraslacion) {
     this->DeltaTraslacion = DeltaTraslacion;
     this->posOriginal = pos;
