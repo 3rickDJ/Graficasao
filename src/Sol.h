@@ -3,7 +3,8 @@
 #include "Point.h"
 
 class Sol {
-    public:
+  public:
+    Sol();
     Sol(Point pos, float Deltagrado, Point escalado, float radio);
     Circulo sol;
     /* Point pos; */
