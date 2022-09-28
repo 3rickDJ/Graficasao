@@ -1,6 +1,7 @@
 #include "Line.h"
 #include "Triangulo.h"
 #include "Montagna.h"
+#include "Arbol.h"
 #include <GL/glut.h>
 #include <unistd.h>
 // Variables globales
@@ -9,6 +10,11 @@ Montagna montagna1({-50, -25}, {0, 41}, {48, -25}, {-222,200});
 Montagna montagna2({-48, -25}, {0, 53}, {53, -25}, {-180,200});
 Montagna montagna3({-60, -25}, {0, 54}, {52, -25}, {187,200});
 Montagna montagna4({-53, -25}, {0, 52}, {53, -25}, {210,200});
+Arbol arbol1({200,250}, {0.64,-7});
+Arbol arbol2({-200,250}, {-0.64,-7});
+Arbol arbol3({-169,265}, {-0.64,-7});
+Arbol arbol4({142,268}, {0.64,-7});
+Arbol arbol5({141,350}, {0.64,-7});
 
 void plotAxis() {
   Line::Draw({-255, 0}, {255, 0});
@@ -26,6 +32,11 @@ void dibujaEscenario() {
   montagna2.draw();
   montagna3.draw();
   montagna4.draw();
+  arbol1.draw();
+  arbol2.draw();
+  arbol3.draw();
+  arbol4.draw();
+  arbol5.draw();
 }
 
 // actualizar variables de control
