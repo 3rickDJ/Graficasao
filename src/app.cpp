@@ -3,6 +3,7 @@
 #include "Montagna.h"
 #include "Arbol.h"
 #include "Circulo.h"
+#include "Sol.h"
 #include <GL/glut.h>
 #include <unistd.h>
 // Variables globales
@@ -18,6 +19,7 @@ Arbol arbol4({142,268}, {0.64,-7});
 Arbol arbol5({141,350}, {0.64,-7});
 
 Circulo circulo(23, {0,-194}, {1,-1}, {1,1});
+Sol sol({-110,220},2,{1,1},20);
 
 void plotAxis() {
   Line::Draw({-255, 0}, {255, 0});
@@ -41,6 +43,7 @@ void dibujaEscenario() {
   arbol4.draw();
   arbol5.draw();
   circulo.draw();
+  sol.draw();
 }
 
 // actualizar variables de control
