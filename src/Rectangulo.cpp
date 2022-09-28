@@ -27,8 +27,12 @@ void Rectangulo::draw() {
     rotar(DeltaAngulo);
     escalar(DeltaEscalamiento);
     mover(DeltaTraslacion);
-    Point p0, p1, p2, p3;
     // plotear
+    getPlotPoints();
+    update();
+}
+void Rectangulo::getPlotPoints() {
+    Point p0, p1, p2, p3;
     p0 = Matrix::getPoint(A, Puntos[0]);
     p1 = Matrix::getPoint(A, Puntos[1]);
     p2 = Matrix::getPoint(A, Puntos[2]);
@@ -36,7 +40,6 @@ void Rectangulo::draw() {
     Line::Draw(p0, p1);
     Line::Draw(p1, p2);
     Line::Draw(p2, p3);
-    Line::Draw(p3, p0);
-    update();
+    Line::Draw(p0, p3);
 }
 void Rectangulo::update() {}
