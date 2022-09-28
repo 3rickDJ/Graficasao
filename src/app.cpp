@@ -1,50 +1,15 @@
 #include "Line.h"
-#include "Triangulo.h"
-#include "Montagna.h"
-#include "Arbol.h"
-#include "Circulo.h"
-#include "Sol.h"
+#include "Escenario.h"
+
 #include <GL/glut.h>
 #include <unistd.h>
 // Variables globales
-/* Triangulo triangulo({-43, -25}, {0, 50}, {43, -25}); */
-Montagna montagna1({-50, -25}, {0, 41}, {48, -25}, {-222,200});
-Montagna montagna2({-48, -25}, {0, 53}, {53, -25}, {-180,200});
-Montagna montagna3({-60, -25}, {0, 54}, {52, -25}, {187,200});
-Montagna montagna4({-53, -25}, {0, 52}, {53, -25}, {210,200});
-Arbol arbol1({200,250}, {0.64,-7});
-Arbol arbol2({-200,250}, {-0.64,-7});
-Arbol arbol3({-169,265}, {-0.64,-7});
-Arbol arbol4({142,268}, {0.64,-7});
-Arbol arbol5({141,350}, {0.64,-7});
+Escenario escenario;
+/* void plotAxis() { */
+/*   Line::Draw({-255, 0}, {255, 0}); */
+/*   Line::Draw({0, -255}, {0, 255}); */
 
-Circulo circulo(23, {0,-194}, {1,-1}, {1,1});
-Sol sol({-110,220},2,{1,1},20);
-
-void plotAxis() {
-  Line::Draw({-255, 0}, {255, 0});
-  Line::Draw({0, -255}, {0, 255});
-  //Lineas laterales del carril carretera
-  Line::Draw({-112,-255}, {-58, 255});
-  Line::Draw({112,-255}, {58, 255});
-
-}
-void dibujaEscenario() {
-  plotAxis();
-  /* triangulo.Traslacion = {60,60}; */
-  /* triangulo.draw(); */
-  montagna1.draw();
-  montagna2.draw();
-  montagna3.draw();
-  montagna4.draw();
-  arbol1.draw();
-  arbol2.draw();
-  arbol3.draw();
-  arbol4.draw();
-  arbol5.draw();
-  circulo.draw();
-  sol.draw();
-}
+/* } */
 
 // actualizar variables de control
 void update() {
@@ -55,7 +20,7 @@ void update() {
 
 void display() {
   glClear(GL_COLOR_BUFFER_BIT);
-  dibujaEscenario();
+  escenario.draw();
   update();
 }
 
